@@ -8,11 +8,15 @@
 
 2. git co 本项目
 
+  `git clone https://github.com/mipengine/mip-cli-plugin-site.git`
+
 3. cd 到项目中，`npm link`
 
   之后运行 `mip2 --help`，如果在最后出现了 `mip2 site` 命令的说明，表示安装成功
 
-4. git co 模板项目 (地址)
+4. git co 模板项目 ([https://github.com/mipengine/dev-mip-site](https://github.com/mipengine/dev-mip-site))
+
+  `git clone https://github.com/mipengine/dev-mip-site.git`
 
 5. cd 到模板项目，执行各种命令 （例如 `mip2 site dev` 等等）
 
