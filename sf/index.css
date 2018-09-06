@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+}
+
+.input-wrapper {
+  margin: 0 10px;
+}
+
+#url {
+  width: 90%;
+  height: 50px;
+  resize: none;
+}
+
+.input {
+  width: 90%;
+  height: 30px;
+  line-height: 30px;
+  margin-top: 10px;
+}
+
+.button {
+  background: #2af;
+  color: white;
+  text-align: center;
+  height: 30px;
+  padding: 10px;
+  line-height: 30px;
+  display: inline-block;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.cache-button {
+  background: white;
+  color: black;
+  width: 126px;
+  height: 20px;
+  font-size: 14px;
+  line-height: 20px;
+  border: 1px solid rgb(169, 169, 169);
+  border-radius: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+}
+
+.cache-button span {
+  color: red;
+}
+
+.row {
+  position: relative;
+  height: 42px;
+  margin: 10px 0 15px;;
+}
+
+.row .cache-hint {
+  margin-left: 160px;
+  display: inline-block;
+  line-height: 21px;
+  height: 42px;
+}

@@ -20,16 +20,18 @@
 
 ## 功能列表 & Checklist
 
-- [ ] 初始化项目（组件项目也作为一个目录包含在内）（这里可能需要一个子命令，如 `mip2 site init`）
+- [ ] 初始化项目（这里可能需要一个子命令，如 `mip2 site init`）
 - [x] 编译组件 & 提供服务器支持（即可以通过 `/[componentName]/[componentName].js` 访问到，目前 `mip2 dev` 已经实现，但要融合到启动服务器一起，而不是让开发者打两条命令）
-- [x] 启动 nodejs 服务器 （可能又是一个子命令 `mip2 site dev`）
+- [ ] 启动 nodejs 服务器 （可能又是一个子命令 `mip2 site dev`）
   - [x] 允许开发者获取 URL 上的参数
   - [x] 允许开发者发送请求，获取数据
   - [x] 允许开发者编写模板，并使用数据填充模板
   - [x] 最终输出一个包含 `<mip-xxx>` 标签的 HTML 页面（即常规的 MIP 页面）
   - [x] 允许 actions & templates 的热加载
+  - [ ] 把静态目录 (static) 从 mip-component 目录里面移动到根目录来
   - [x] 允许开发者指定配置项，如端口号 （低）
 - [ ] 允许开发者在 SF 环境内调试（mip-sf 项目融合其中，可以在 `mip2 site dev` 中添加一条固定的路由）（中）
+  - [ ] 添加单独的命令 `mip2 sf` 单独启动一个 SF 调试环境（中）
 - [ ] 允许开发者在外层目录进行一些组件的快速操作，而不是 `cd` 到目录里面再操作
   - [ ] 添加组件 `mip2 site add-component`（中）
   - [ ] 打包组件 `mip2 site build-component`（中）

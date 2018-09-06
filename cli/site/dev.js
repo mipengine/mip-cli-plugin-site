@@ -11,10 +11,6 @@ module.exports = {
     config: {
       description: '启动 MIP2 站点开发服务器',
       name: 'mip2 site dev',
-      // options: [
-      //   ['-f, --force', '强制执行'],
-      //   ['-p, --port <value>', '端口号']
-      // ],
       help: [
         '',
         '  Examples:',
