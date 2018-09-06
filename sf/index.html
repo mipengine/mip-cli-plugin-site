@@ -53,11 +53,11 @@
         window.fif = {
           action: rt.action
         };
-        let debug = new rt.service()
-        debug.create = () => document.querySelector('.input-wrapper').style.display = 'block'
-        debug.destroy = () => document.querySelector('.input-wrapper').style.display = 'none'
-        debug.getContainer = () => document.querySelector('.input-wrapper')
-        rt.action.regist('/debug', debug);
+        let offlineSF = new rt.service()
+        offlineSF.create = () => document.querySelector('.input-wrapper').style.display = 'block'
+        offlineSF.destroy = () => document.querySelector('.input-wrapper').style.display = 'none'
+        offlineSF.getContainer = () => document.querySelector('.input-wrapper')
+        rt.action.regist('/sf', offlineSF);
         // rt.action.regist('/', new rt.service());
 
         console.log('MIP Services 加载成功！');

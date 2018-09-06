@@ -2,7 +2,6 @@
   "name": "mip-cli-plugin-site",
   "version": "1.0.0",
   "description": "cli plugin for `mip2 site`",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
