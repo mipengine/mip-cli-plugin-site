@@ -17,6 +17,11 @@ if (location.search.indexOf('url=') !== -1) {
   }
 }
 let cacheButton = document.querySelector('#fromCache')
+
+// 默认设置为线下
+if (window.localStorage.mipsitenocache === undefined) {
+  window.localStorage.mipsitenocache = '1'
+}
 let fromCache = window.localStorage.mipsitenocache !== '1'
 toggleCache(fromCache)
 

@@ -11,12 +11,12 @@
 </head>
 <body>
   <div class="input-wrapper">
-    <p>输入目标 MIP 页面的 URL：<br>（如 https://www.lanxiniu.com/BaiduMip/order）</p>
-    <textarea id="url" placeholder="【必填】目标页面的 URL，不要忘记协议头"></textarea>
+    <p>输入目标 MIP 页面的 URL：<br>(支持 localhost)</p>
+    <textarea id="url" placeholder="【必填】目标页面的 URL，不要忘记协议头。使用线上测试时，需要将 host 映射到百度域。"></textarea>
+    <div class="button cache-button" id="fromCache">当前状态：<span>线下测试</span></div>
     <div class="row">
-        <div class="button cache-button" id="fromCache">当前状态：<span>线上测试</span></div>
-        <span class="cache-hint" type="cacheHintOnline">读取 mipcdn.com <br>适合已经上线的站点</span>
-        <span class="cache-hint" type="cacheHintOffline" style="display: none">读取目标 URL <br>适合尚未上线的站点</span>
+        <span class="cache-hint" type="cacheHintOnline" style="display: none">读取 mipcdn.com，适合已经上线的站点</span>
+        <span class="cache-hint" type="cacheHintOffline">读取目标 URL，适合线下测试</span>
     </div>
     <hr>
     <p>以下两个选项均为选填<br>表示打开 SF 的 loading 动画时的 LOGO 和标题</p>
