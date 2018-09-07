@@ -18,6 +18,39 @@
 
 5. cd 到模板项目，执行各种命令 （例如 `mip2 site dev` 等等）
 
+## 开发前的注意点
+
+因为 mip-cli 项目本身也需要一些改动，因此在他们发新版之前，需要对全局安装的 mip2 的代码进行小幅改动。
+
+找到全局安装的 mip2 (Windows 路径是： `C:\Users\wangyisheng\AppData\Roaming\npm\node_modules\mip2`， MAC 同学自行寻找)，然后找到其中的 `lib/server/index.js` 文件：
+
+```diff
+module.exports = class Server {
+  constructor (options) {
+    // 其他代码
+
++   this.router = new Router()
+
+    Object.keys(options).forEach(key => {
+      this[key] = options[key]
+    })
+  }
+
+  run () {
+    // 其他代码
+
+-   this.router = new Router()
+    this.router
+      .get(['/:id([^\\.]*)', '/:id([^\\.]+\\.html)'], ...htmlMiddlewares)
+      .get('*', ...scriptMiddlewares, koaStatic(this.dir))
+
+    // 其他代码
+  }
+}
+```
+
+相当于把 `this.router` 的初始化工作移动到 `constructor` 里面即可。
+
 ## 功能列表 & Checklist
 
 - [ ] 初始化项目（这里可能需要一个子命令，如 `mip2 site init`）
