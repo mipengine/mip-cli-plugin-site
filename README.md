@@ -61,10 +61,11 @@ module.exports = class Server {
   - [x] 允许开发者编写模板，并使用数据填充模板
   - [x] 最终输出一个包含 `<mip-xxx>` 标签的 HTML 页面（即常规的 MIP 页面）
   - [x] 允许 actions & templates 的热加载
-  - [ ] 把静态目录 (static) 从 mip-component 目录里面移动到根目录来
+  - [x] 把静态目录 (static) 从 mip-component 目录里面移动到根目录来
   - [x] 允许开发者指定配置项，如端口号 （低）
 - [x] 允许开发者在 SF 环境内调试（mip-sf 项目融合其中，可以在 `mip2 site dev` 中添加一条固定的路由）（中）
-  - [ ] 添加单独的命令 `mip2 sf` 单独启动一个 SF 调试环境（中）
+  - [x] 添加单独的命令 `mip2 sf` 单独启动一个 SF 调试环境（中）
+- [ ] 检查开发者是不是在一个合法的 site 项目里面启动命令，避免意料外的奇怪报错 （中）
 - [ ] 允许开发者在外层目录进行一些组件的快速操作，而不是 `cd` 到目录里面再操作
   - [ ] 添加组件 `mip2 site add-component`（中）
   - [ ] 打包组件 `mip2 site build-component`（中）
