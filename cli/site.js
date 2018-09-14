@@ -13,6 +13,8 @@ module.exports = {
         '',
         '  Examples:',
         '',
+        '    # 启动 MIP2 站点开发初始化模板',
+        '    $ mip2 site init',
         '    # 启动 MIP2 站点开发服务器',
         '    $ mip2 site dev'
       ].join('\n')
