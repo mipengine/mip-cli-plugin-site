@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="referrer" content="always">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>SF 线下环境测试</title>
+  <link rel="stylesheet" href="//gss0.bdstatic.com/9rkZbzqaKgQUohGko9WTAnF6hhy/assets/mip2/mip-sf/sfview.css">
+  <link rel="stylesheet" href="/sf/index.css">
+</head>
+<body>
+  <div class="input-wrapper">
+    <p>输入目标 MIP 页面的 URL：<br>(支持 localhost)</p>
+    <textarea id="url" placeholder="【必填】目标页面的 URL，不要忘记协议头。使用线上测试时，需要将 localhost 映射到百度域。"></textarea>
+    <div class="button cache-button" id="fromCache">当前状态：<span>线下测试</span></div>
+    <div class="row">
+        <span class="cache-hint" type="cacheHintOnline" style="display: none">读取 mipcdn.com，适合已经上线的站点</span>
+        <span class="cache-hint" type="cacheHintOffline">读取目标 URL，适合线下测试</span>
+    </div>
+    <hr>
+    <p>以下两个选项均为选填<br>表示打开 SF 的 loading 动画时的 LOGO 和标题</p>
+    <input class="input" id="logo" placeholder="【选填】目标页面的 LOGO URL">
+    <input class="input" id="title" placeholder="【选填】目标页面的标题">
+    <div id="go-button" class="button">出发测试！</div>
+  </div>
+  <script src="//gss0.bdstatic.com/9rkZbzqaKgQUohGko9WTAnF6hhy/assets/mip2/mip-sf/esl.js"></script>
+  <script src="//gss0.bdstatic.com/9rkZbzqaKgQUohGko9WTAnF6hhy/assets/mip2/mip-sf/zepto.js"></script>
+  <script>
+    window.page = window.page || {};
+    page.https = {
+      domain: {
+        get: function (domain) {
+          // console.error('no https domain: ' + domain);
+          return 'about:blank/' + domain;
+        }
+      }
+    };
+    page.comm = {};
+  </script>
+  <script src="//gss0.bdstatic.com/9rkZbzqaKgQUohGko9WTAnF6hhy/assets/mip2/mip-sf/ralltiir-mip-full.js"></script>
+  <script type="text/javascript">
+    // 引入依赖
+    require.config({
+      waitSeconds: 0.1
+    });
+
+    require(['@baidu/fusion-components/dist/deps/bdetpl'], function (etpl) {
+      // 先加载 etpl
+      page.etpl = etpl;
+
+      require(['ralltiir', '@baidu/ralltiir-mip-services'], function (rt, svc) {
+        window.fif = {
+          action: rt.action
+        };
+        let offlineSF = new rt.service()
+        offlineSF.create = () => document.querySelector('.input-wrapper').style.display = 'block'
+        offlineSF.destroy = () => document.querySelector('.input-wrapper').style.display = 'none'
+        offlineSF.getContainer = () => document.querySelector('.input-wrapper')
+        rt.action.regist('/sf', offlineSF);
+        // rt.action.regist('/', new rt.service());
+
+        console.log('MIP Services 加载成功！');
+
+        rt.action.start({
+          root: '/',
+          visitedClassName: 'c-visited'
+        });
+      });
+    });
+  </script>
+  <script src="/sf/index.js"></script>
+</body>
+</html>
