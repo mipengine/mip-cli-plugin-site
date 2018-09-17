@@ -20,6 +20,7 @@ module.exports = {
       ].join('\n')
     },
     main () {
+      require('../../lib/checkRootPath')
       let config = readConfig()
       startDevServer(config)
     }

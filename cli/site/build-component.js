@@ -1,8 +1,7 @@
 /**
- * @file       b编译组件命令
+ * @file       编译组件命令
  * @author     chenyongle@baidu.com(chenyongle)
  */
-
 const readConfig = require('../../lib/readConfig')
 const buildComponent = require('../../lib/buildComponent')
 
@@ -20,6 +19,7 @@ module.exports = {
       ].join('\n')
     },
     main () {
+	  require('../../lib/checkRootPath')
       let config = readConfig()
       buildComponent(config)
     }
