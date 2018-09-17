@@ -13,6 +13,8 @@ module.exports = {
         '',
         '  Examples:',
         '',
+        '    # 启动 MIP2 新增一个模板组件',
+        '    $ mip2 site add-component <component-name>',
         '    # 启动 MIP2 站点开发初始化模板',
         '    $ mip2 site init',
         '    # 启动 MIP2 站点开发服务器',
