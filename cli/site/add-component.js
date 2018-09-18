@@ -4,6 +4,7 @@
  */
 
 const addComponent = require('../../lib/addComponent.js')
+const checkRootPath = require('../../lib/checkRootPath.js')
 const chalk = require('chalk')
 const fs = require('fs')
 const path = require('path')
@@ -38,6 +39,8 @@ module.exports = {
         console.warn('组件名称不规范！请输入形如 mip-xxx 的名称')
         return
       }
+
+      checkRootPath()
 
       if (!fs.existsSync(path.resolve('mip-component'))) {
         console.warn('请在项目根目录执行 mip2 site add-component 命令')

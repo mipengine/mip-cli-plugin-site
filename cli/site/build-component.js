@@ -4,6 +4,7 @@
  */
 const readConfig = require('../../lib/readConfig')
 const buildComponent = require('../../lib/buildComponent')
+const checkRootPath = require('../../lib/checkRootPath')
 
 module.exports = {
   cli: {
@@ -19,7 +20,7 @@ module.exports = {
       ].join('\n')
     },
     main () {
-	  require('../../lib/checkRootPath')
+      checkRootPath()
       let config = readConfig()
       buildComponent(config)
     }
