@@ -5,6 +5,7 @@
 
 const readConfig = require('../../lib/readConfig')
 const startDevServer = require('../../lib/startDevServer')
+const checkRootPath = require('../../lib/checkRootPath')
 
 module.exports = {
   cli: {
@@ -20,7 +21,7 @@ module.exports = {
       ].join('\n')
     },
     main () {
-      require('../../lib/checkRootPath')
+      checkRootPath()
       let config = readConfig()
       startDevServer(config)
     }
