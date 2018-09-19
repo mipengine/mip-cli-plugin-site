@@ -43,3 +43,4 @@
 ## 命令详解
 
 * [mip2 site dev](https://github.com/mipengine/mip-cli-plugin-site/blob/master/doc/dev.md)
+* [mip2 site build-component](https://github.com/mipengine/mip-cli-plugin-site/blob/master/doc/build-component.md)
