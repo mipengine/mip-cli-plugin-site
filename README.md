@@ -42,4 +42,4 @@
 
 ## 命令详解
 
-* [mip2 site dev](https://github.com/mipengine/mip-cli-plugin-site/blob/master/doc/dev.js)
+* [mip2 site dev](https://github.com/mipengine/mip-cli-plugin-site/blob/master/doc/dev.md)
