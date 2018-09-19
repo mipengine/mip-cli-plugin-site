@@ -16,7 +16,7 @@ const CONFIG = {
   noArgs: true,
   options: [
     ['-a, --asset <value>', '静态资源 publicPath'],
-    ['-d, --dir <value>', '项目文件夹路径'],
+    ['-d, --dir <value>', '组件文件夹路径'],
     ['-o, --output <value>', '编译代码输出路径'],
     ['-c, --clean', '构建前先清空输出目录'],
     /* eslint disable */

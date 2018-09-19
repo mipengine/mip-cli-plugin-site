@@ -8,6 +8,9 @@
 
 `-a, --asset <value>` 静态资源 publicPath
 
+- 用法
+
+
 ```bash
 # 示例
 mip2 site build-component -a /dist
@@ -15,7 +18,7 @@ mip2 site build-component -a /dist
 
 ## -d
 
-`-d, --dir <value>` 项目文件夹路径，可以是绝对路径，一般就是项目根目录下的 mip-component。
+`-d, --dir <value>` 组件文件夹路径，可以是绝对路径，也可以是相对路径，相对路径指的是相对于项目根目录下的 mip-component 而言，但是一般来说就是项目根目录下的 mip-component。
 
 - 用法
 
