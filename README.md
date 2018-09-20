@@ -42,5 +42,7 @@
 
 ## 命令详解
 
+* [mip2 site init](https://github.com/mipengine/mip-cli-plugin-site/blob/master/doc/init.md)
 * [mip2 site dev](https://github.com/mipengine/mip-cli-plugin-site/blob/master/doc/dev.md)
+* [mip2 site add-component](https://github.com/mipengine/mip-cli-plugin-site/blob/master/doc/add-component.md)
 * [mip2 site build-component](https://github.com/mipengine/mip-cli-plugin-site/blob/master/doc/build-component.md)
