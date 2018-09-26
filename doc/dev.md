@@ -51,17 +51,17 @@
 1. 组件开发服务器部分，和 `mip dev` 命令的参数一致，因此也可以参考 [mip cli 文档的 dev 部分](https://github.com/mipengine/mip2/blob/dev/docs/guide/mip-cli/cli-usage.md#mip2-dev-%E5%90%AF%E5%8A%A8%E8%B0%83%E8%AF%95%E6%9C%8D%E5%8A%A1%E5%99%A8)
 
   | 配置项  | 类型 | 默认值 | 说明 |
-  | ------------- | ------------- |
+  | --- | --- | --- | --- |
   | port  | __number__  | `8200` | 服务器启动端口号 |
   | livereload  | __boolean__  | `true` | 是否开启热加载 |
-  | autoopen  | __string | boolean__  | `false` | 服务器启动成功后是否自动打开页面 |
+  | autoopen  | __string\|boolean__  | `false` | 服务器启动成功后是否自动打开页面 |
   | ignore  | __string__  | `'sandbox,whitelist'` | 是否忽略沙盒注入或校验 |
   | asset  | __string__  | `''` | 静态资源 publicPath |
 
 2. SF 线下调试环境部分，包含
 
   | 配置项  | 类型 | 默认值 | 说明 |
-  | ------------- | ------------- |
+  | --- | --- | --- | --- |
   | enableSF  | __boolean__  | `true` | 是否开启线下 SF 调试环境 |
 
 配置文件以 JSON 的格式存在，详情可以参考 `mip2 site init` 项目中的 `mip.config.js`，或者[在线版本](https://github.com/mipengine/mip-plugin-site-template/blob/master/mip.config.js)
