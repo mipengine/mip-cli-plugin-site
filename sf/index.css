@@ -10,6 +10,7 @@ input, textarea {
 
 .input-wrapper {
   margin: 0 10px;
+  display: none;
 }
 
 #url {
